@@ -1,0 +1,106 @@
+<div>
+
+    <!-- 搜索院线功能 -->
+    <script>
+        $('#ss').searchbox({
+            width: 300,
+            searcher: function (value, name) {
+                let params = {};
+                params[name] = value;
+                $('#easyTable').datagrid({
+                    queryParams: params
+                })
+
+            },
+            menu: '#mm',
+            prompt: '请输入查询内容.'
+        });
+    </script>
+    <!-- end -->
+    <div style="position: relative;">
+        <table id="easyTable">
+
+        </table>
+        <div id="mvoie_button_div" style="position: absolute;top: 5px;left: 300px; z-index: 3;">
+            <input id="ss"></input>
+            <div id="mm" style="width:20px">
+                <div data-options="name:'theatreMge_name',iconCls:'icon-search'">院线</div>
+                <div data-options="name:'theatreMge_address',iconCls:'icon-search'">地址</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 添加院线信息 -->
+    <div id="add" style="display: none;">
+        <p style="margin: 10px 0 10px 50px">
+            院线：
+            <input id="theatreMge_name" class="easyui-textbox" style="width:250px" name="theatreMae_name" value="">
+        </p>
+        <p style="margin: 10px 0 10px 50px">
+            地址：
+            <input id="theatreMge_address" class="easyui-textbox" style="width:250px" name="theatreMge_address">
+        </p>
+        <p style="margin: 10px 0 10px 50px">
+            电话：
+            <input id="theatreMge_phone" class="easyui-textbox" style="width:250px" name="theatreMge_phone">
+        </p>
+        <p style="margin: 10px 0 10px 50px">
+            网址：
+            <input id="theatreMge_url" class="easyui-textbox" style="width:250px" name="theatreMge_url">
+        </p>
+        <p style="margin: 10px 0">
+            <a id="btn" href="#" style="margin-left: 100px;margin-top:30px;">添加新的影厅</a>
+        </p>
+    </div>
+    <!-- 添加放映厅 -->
+    <div id="studio" style="display: none;text-align: center">
+        <p style="margin: 10px 0">
+            放映厅：
+            <input id="sereeningName" class="easyui-textbox" style="width:250px">
+        </p>
+        <p style="margin: 10px 0">
+            座 &nbsp;&nbsp; 位：
+            <input id="seat" class="easyui-textbox" style="width:250px" disabled>
+        </p>
+        <p style="margin: 10px 0">
+            行：
+            <input id="row" class="easyui-textbox" style="width: 40px;" value="10"> 列：
+            <input id="col" class="easyui-textbox" style="width: 40px;" value="18">
+        </p>
+        <p style="margin: 10px 0 10px 50px;">
+            <a id="preview_btn" href="#" style="margin-top:30px;">预览</a>
+        </p>
+        <!-- 预览座位 -->
+        <div>
+            <table style="margin: 0 auto">
+                <tbody id="seat_table" style="border-collapse: collapse;display: none;margin: 10px auto;">
+
+                </tbody>
+            </table>
+        </div>
+
+
+
+        <!-- 修改院线信息 -->
+        <div id="updata" style="display: none;">
+            <p style="margin: 10px 0 10px 50px">
+                院线：
+                <input id="updata_name" class="easyui-textbox" style="width:250px" name="updata_name" value="">
+            </p>
+            <p style="margin: 10px 0 10px 50px">
+                地址：
+                <input id="updata_address" class="easyui-textbox" style="width:250px" name="updata_address">
+            </p>
+            <p style="margin: 10px 0 10px 50px">
+                电话：
+                <input id="updata_phone" class="easyui-textbox" style="width:250px" name="updata_phone">
+            </p>
+            <p style="margin: 10px 0 10px 50px">
+                网址：
+                <input id="updata_url" class="easyui-textbox" style="width:250px" name="updata_url">
+            </p>
+        </div>
+
+
+    </div>
+</div>

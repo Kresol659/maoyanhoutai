@@ -1,0 +1,87 @@
+<div id="nowPage" style="height: 550px;overflow: hidden;">
+    <div style="position: relative;">
+        <table id="suit_tab">
+
+        </table>
+        <div id="search_position">
+            <input id="search_input"></input>
+            <div id="search_menu" style="width:120px">
+                <div data-options="name:'theatreMch_movie_name'">电影</div>
+                <div data-options="name:'theatreMch_movie_ename'">电影英文名</div>
+                <div data-options="name:'theatreMch_movie_type'"> 电影类型</div>
+            </div>
+        </div>
+    </div>
+    <div id="add_window">
+        <table id="add_movie">
+
+        </table>
+    </div>
+    <div id="cinema_window">
+        <table id="add_cinema">
+
+        </table>
+    </div>
+    <div id="show_window">
+        <table id="add_show">
+
+        </table>
+    </div>
+    <div id="show_price">
+        <div style="margin:15px auto;width: 250px;">
+            <select id="showName" name="dept" style="width:200px;"></select>
+
+            </select>
+        </div>
+        <div style="margin:15px auto;width: 250px;">
+            <input id="showTime" type="text" style="width:300px">
+        </div>
+        <div style="margin:15px auto;width: 250px;">
+            <input id="showPrice" type="text" style="width:300px">
+        </div>
+    </div>
+    <div id="change_window">
+        <table id="change_now_movie">
+
+        </table>
+        <div style="margin:30px auto;width: 250px;">
+            <select id="change_cinema_name" name="dept" style="width:200px;"></select>
+
+            </select>
+        </div>
+        <div style="margin:30px auto;width: 250px;">
+            <select id="add_cinema_name" name="dept" style="width:200px;"></select>
+
+            </select>
+        </div>
+    </div>
+
+    <input type="hidden" id="tempCinemaArr">
+
+
+    <div id="showNow_window">
+        <div style="margin:30px auto;width: 300px;">
+            <select id="showNow_Cinema" name="dept" style="width:200px;"></select>
+
+            </select>
+        </div>
+        <table id="selectShow">
+            <input type="hidden" id="getcinemaName">
+        </table>
+    </div>
+    <div id="changeShow_window" style="text-align: center">
+        <input type="hidden" id="nowShow_id">
+        <div style="margin:50px auto 15px auto;width: 250px;">
+            <select id="changeShow_name" name="dept" style="width:200px;"></select>
+
+            </select>
+        </div>
+        <div style="margin:15px auto;width: 250px;">
+            <input id="changeShow_time" type="text" style="width:300px">
+            <input type="hidden" id="getShowTime">
+        </div>
+        <div style="margin:15px auto;width: 250px;">
+            <input id="changeShow_price" type="text" style="width:300px">
+        </div>
+    </div>
+</div>

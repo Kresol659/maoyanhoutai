@@ -1,0 +1,243 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>猫眼电影后台管理1</title>
+    <link rel="stylesheet" href="./stylesheets/themes/insdep/easyui.css">
+    <link rel="stylesheet" href="./stylesheets/themes/insdep/insdep_theme_default.css">
+    <link rel="stylesheet" href="./stylesheets/themes/insdep/icon.css">
+    <style>
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        i {
+            font-style: normal;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .addstyle {
+            margin: 10px 0;
+
+        }
+
+        #addAlert {
+            text-align: center;
+        }
+
+        .manager_text {
+            display: flex;
+            padding: 10px 0;
+            color: rgb(239, 249, 253);
+        }
+
+        .manager_text>p {
+            margin-right: 10px;
+            cursor: default;
+
+        }
+
+        .manager_text:hover {
+            background-color: rgb(221, 221, 218);
+            padding-left: 10px;
+            color: rgb(10, 42, 102);
+        }
+
+        .userState {
+            float: right;
+            margin-top: 70px;
+            margin-right: 50px;
+            font-size: 14px;
+        }
+
+        .userState>span {
+            margin-right: 20px;
+            color: aliceblue;
+        }
+
+        .userState>a {
+            font-weight: 600;
+        }
+
+        .system_text {
+            float: left;
+            color: rgb(209, 204, 204);
+            font-size: 24px;
+            margin-left: 20px;
+            margin-top: 30px;
+        }
+
+        .user_icon {
+            width: 20px;
+            height: 20px;
+            background: url('./images/user_icon.png');
+
+        }
+
+        .news_icon {
+            width: 20px;
+            height: 20px;
+            background: url('./images/news_icon.png');
+        }
+
+        .movie_icon {
+            width: 20px;
+            height: 20px;
+            background: url('./images/movie_icon.png');
+        }
+
+        .cinema_icon {
+            width: 20px;
+            height: 20px;
+            background: url('./images/cinema_icon.png');
+        }
+
+        .hotplay_icon {
+            width: 20px;
+            height: 20px;
+            background: url('./images/hotplay_icon.png');
+        }
+
+        .hotup_icon {
+            width: 20px;
+            height: 20px;
+            background: url('./images/hotup_icon.png');
+        }
+
+        .will_icon {
+            width: 20px;
+            height: 20px;
+            background: url('./images/will_icon.png');
+        }
+
+        .suit_icon {
+            width: 20px;
+            height: 20px;
+            background: url('./images/suit_icon.png');
+        }
+
+        #firBtn {
+            margin-right: 15px;
+            font-size: 12px;
+        }
+
+        #firBtn,
+        #secBtn {
+            color: rgb(199, 199, 199);
+            box-shadow: 4px 1px 14px rgb(209, 209, 209);
+        }
+
+        #firBtn>span {
+            color: #fff;
+       
+        }
+
+        .sys_text {
+            font-size: 30px;
+            color: #fff;
+        }
+
+        .introduce {
+            font-size: 12px;
+            color: beige;
+        }
+    </style>
+</head>
+
+<body class="easyui-layout">
+
+    <div data-options="region:'north'" style="width:100%;height:100px;background: #47464a;background-size: cover">
+        <div class="system_text">
+            <p class="sys_text">猫眼后台管理系统</p>
+            <p class="introduce">猫眼电影 - 一网打尽好电影</p>
+        </div>
+        <div class="userState">
+            <a href="#" id="firBtn"></a>
+        </div>
+    </div>
+    <div data-options="region:'west',expandMode:'float'" style="width:180px;background-color: rgb(153, 153, 153);border: none;">
+        <div class="easyui-accordion" style="border: none;background-color: #47464a">
+            <div title="管理菜单" style="padding:10px;border: none;background-color: rgb(145, 145, 145);height: 605px;" class="nav">
+                <div class="manager_text" data-type="user">
+                    <p class="user_icon">
+
+                    </p>
+                    <p style="font-size: 14px;">用户管理</p>
+                </div>
+                <div class="manager_text" data-type="message">
+                    <p class="news_icon">
+
+                    </p>
+                    <p style="font-size: 14px;">资讯管理</p>
+                </div>
+                <div class="manager_text" data-type="movie">
+                    <p class="movie_icon">
+
+                    </p>
+                    <p style="font-size: 14px;">电影管理</p>
+                </div>
+                <div class="manager_text" data-type="theatreManage">
+                    <p class="cinema_icon">
+
+                    </p>
+                    <p style="font-size: 14px;">院线管理</p>
+                </div>
+                <div class="manager_text" data-type="hotBroadcast">
+                    <p class="hotplay_icon">
+
+                    </p>
+                    <p style="font-size: 14px;">热播电影</p>
+                </div>
+                <div class="manager_text" data-type="hotShowing">
+                    <p class="hotup_icon">
+
+                    </p>
+                    <p style="font-size: 14px;">热映电影</p>
+                </div>
+                <div class="manager_text" data-type="comingSoon">
+                    <p class="will_icon">
+
+                    </p>
+                    <p style="font-size: 14px;">即将上映</p>
+                </div>
+                <div class="manager_text" data-type="theatreMatch">
+                    <p class="suit_icon">
+
+                    </p>
+                    <p style="font-size: 14px;">院线匹配</p>
+                </div>
+                <div class="manager_text" data-type="xiangguanzixun">
+                    <p class="suit_icon">
+
+                    </p>
+                    <p style="font-size: 14px;">相关资讯</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="tabs" data-options="region:'center'" style="padding:0 5px;background:#eee;border: none;width: 100%;" class="easyui-tabs">
+
+    </div>
+    <div data-options="region:'south'" style="height:25px;background-color: rgb(241, 221, 221);">
+        <p style="font-size: 14px;float: left;margin-left: 20px;">
+            <span style="font-size: 16px;">©</span> 猫眼版权所有
+        </p>
+        <p style="float: right;margin-top: 5px;margin-right: 20px; font-weight: 600;">
+            开发人员：刘吴江 黄钧 雷雨承 秦朝辉 郭嵌 王潇
+        </p>
+    </div>
+
+
+    <script src="./js/jquery-1.11.2-min.js"></script>
+    <script src="./js/jquery.easyui.min.js"></script>
+    <script src="./js/ajaxfileupload.js"></script>
+    <script src="./js/jquery.insdep-extend.min.js"></script>
+    <script type="module" src="./js/index.js"></script>
+</body>
+
+</html>

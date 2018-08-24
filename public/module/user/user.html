@@ -1,0 +1,50 @@
+<div id="manage_Btn">
+
+
+</div>
+
+<table id="dg" style="margin-left:200px;"></table>
+<!-- // 增加 -->
+<div id="addbtn" class="easyui-dialog" title="增加" style="width:450px;height:380px;text-align: center" data-options="iconCls:'icon-save',resizable:true,closed:true">
+    <div style="margin-bottom:20px;margin-top: 50px;">
+        <input id="addUser_user" class="easyui-textbox" name="name" style="width:80%" data-options="label:'用户 :',required:true,validType:'code',missingMessage:'用户不能为空'">
+    </div>
+
+    <div style="margin-bottom:20px">
+        <input id="addUser_pwd" class="easyui-textbox" name="pwd" style="width:80%" data-options="label:'密码:',required:true,missingMessage:'密码不能为空'">
+    </div>
+    <div style="margin-bottom:20px">
+        <input id="addUser_phone" class="easyui-textbox" name="phone" style="width:80%" data-options="label:'手机:',required:true,missingMessage:'手机不能为空'">
+    </div>
+    <div style="margin-bottom:20px">
+        <input id="addUser_email" class="easyui-textbox" name="email" style="width:80%" data-options="label:'邮箱:',required:true,missingMessage:'姓名不能为空'">
+    </div>
+
+</div>
+<!-- //修改 -->
+<div id="uppbtn" class="easyui-dialog" title="修改" style="width:450px;height:380px;text-align: center" data-options="iconCls:'icon-save',resizable:true,closed:true">
+    <input type="hidden" id="code1">
+    <div style="margin-bottom:20px;margin-top: 50px;">
+        <input id="upUser_user" class="easyui-textbox" name="name" style="width:80%" data-options="label:'用户 :',required:true,validType:'code',missingMessage:'用户不能为空'">
+    </div>
+    <div style="margin-bottom:20px">
+        <input id="upUser_pwd" class="easyui-textbox" name="pwd" style="width:80%" data-options="label:'密码:',required:true,missingMessage:'密码不能为空'">
+    </div>
+    <div style="margin-bottom:20px">
+        <input id="upUser_phone" class="easyui-textbox" name="phone" style="width:80%" data-options="label:'手机:',required:true,missingMessage:'手机不能为空'">
+    </div>
+    <div style="margin-bottom:20px">
+        <input id="upUser_email" class="easyui-textbox" name="email" style="width:80%" data-options="label:'邮箱:',required:true,missingMessage:'邮箱不能为空'">
+    </div>
+
+</div>
+
+<!-- //修改 -->
+<div id="search_div" style="position: absolute;top: 46px;left: 296px;">
+    <input id="search_input"></input>
+    <div id="search_btn" style="width:120px">
+        <div data-options="name:'name'">用户名</div>
+        <div data-options="name:'phone'">手机号</div>
+    </div>
+
+</div>
